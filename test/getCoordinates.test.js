@@ -1,18 +1,19 @@
 const geoCoordinates = require("../getCoordinates");
+const cityNation = 'Livorno Italy';
 
-describe("get Coordinates from openstreetmao api", () => {
+describe("get Coordinates from openstreetmap api", () => {
   it("Should be is a array of objects", done => {
     geoCoordinates
-      .geoByCityCoordinates("Livorno Italy")
+      .geoByCityCoordinates(city)
       .then(function(response) {
         expect(Array.isArray(response.data)).toEqual(true);
       });
     done();
   });
 
-  it("Should contain an array of objects", done => {
+  it("Coordinates from openstreetmap Should contain an array of objects", done => {
     geoCoordinates
-      .geoByCityCoordinates("Livorno Italy")
+      .geoByCityCoordinates(cityNation)
       .then(function(response) {
         response.data.forEach(dataObj => {
           expect(typeof dataObj).toEqual("object");
