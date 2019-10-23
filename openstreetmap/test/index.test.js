@@ -1,4 +1,4 @@
-const geoCoordinates = require("../getCoordinates");
+const geoCoordinates = require("../../getCoordinates");
 var cityNation = 'Livorno Italy';
 
 describe("get Coordinates from openstreetmap api", () => {

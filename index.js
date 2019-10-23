@@ -1,5 +1,5 @@
 const axios = require("axios");
-const geoCoordinates = require("./getCoordinates");
+const geoCoordinates = require("./openstreetmap");
 const fs = require('fs');
 let rawdata = fs.readFileSync('data.json');
 let dataApi = JSON.parse(rawdata);
@@ -15,7 +15,7 @@ const conf = JSON.parse(fs.readFileSync('config.json'));
         }
       })
       .then(function(response){
-          //console.log(response.data);
+          console.log(response.data);
       })
       .catch(function(error){
           console.log(error);
