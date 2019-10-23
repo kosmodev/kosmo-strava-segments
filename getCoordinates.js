@@ -13,6 +13,9 @@ const geoByCityCoordinates = async (q) => {
     const ENDPOINT = `${OPEN_STREET_MAP_DOMAIN}search?${params.toString()}`;
     const location = await axios.get(ENDPOINT);
 
+    if (!location.data) {
+        throw new Error(`No response for Address: ${q}`);
+    }
     return location;
   };
 
