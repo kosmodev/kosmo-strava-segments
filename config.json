@@ -1,0 +1,7 @@
+{
+    "domain"  : "https://www.strava.com/",
+    "api_version": "api/v3/",
+    "end_point":{
+        "segments": "segments/explore"
+    }
+}
